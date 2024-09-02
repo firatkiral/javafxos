@@ -1,0 +1,17 @@
+export DIST_NAME=JavaFxOS
+export DIST_VERSION=0.1.0
+
+# rpi-imager json generator settings
+export RPI_IMAGER_NAME="${DIST_NAME}"
+export RPI_IMAGER_DESCRIPTION="A raspberrypi distro boots directly JavaFX application"
+export RPI_IMAGER_WEBSITE="https://github.com/guysoft/CustomPiOS"
+export RPI_IMAGER_ICON="https://raw.githubusercontent.com/guysoft/CustomPiOS/devel/media/rpi-imager-CustomPiOS.png"
+
+export MODULES="base(network,javafxos)"
+
+export BASE_ADD_USER=yes
+export BASE_USER=pi
+export BASE_USER_PASSWORD=12345
+
+export BASE_IMAGE_ENLARGEROOT=4000
+export BASE_IMAGE_RESIZEROOT=200

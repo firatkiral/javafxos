@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read -r line < "/boot/firmware/javafxos/launch.txt"
+
+echo "sudo java -jar /boot/firmware/javafxos/$line" > "/home/pi/.xinitrc"
+
+if [ -f "/etc/bootrun.sh" ]; then
+  bash /etc/bootrun.sh
+  rm -f /etc/bootrun.sh
+fi

@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# <Script Name>
+# <Description what this module does>
+# Written by <Author>
+# GPL V3
+########
+
+
+# Source error handling, leave this in place
+set -x
+set -e
+
+source /common.sh
+install_cleanup_trap
+
+unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
+unpack /filesystem/home/root /root root
+unpack /filesystem/boot /boot
+
+# Unpack root at the end, so files are modified before
+unpack /filesystem/root /
+
+
+sed -i 's/$/ logo.nologo consoleblank=0 loglevel=0 quiet/' /"${BASE_BOOT_MOUNT_PATH}"/cmdline.txt
+echo "disable_splash=1" >> /"${BASE_BOOT_MOUNT_PATH}"/config.txt
+
+echo "Installing xserver ..."
+apt-get install xserver-xorg xinit -y
+
+echo "Installing JavaFX..."
+wget https://download.bell-sw.com/java/13/bellsoft-jdk13-linux-arm32-vfp-hflt.deb
+apt-get install ./bellsoft-jdk13-linux-arm32-vfp-hflt.deb -y
+rm ./bellsoft-jdk13-linux-arm32-vfp-hflt.deb
+
+
