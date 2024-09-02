@@ -37,7 +37,7 @@ Developing
 ----------
 
 
-Build JavaFXOS From Raspbian
+Build JavaFXOS From Raspbian, Debian, or Ubuntu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can build it by running the following commands:
