@@ -5,20 +5,20 @@ JavaFXOS
 
 ![JavaFX ensemble app](https://raw.githubusercontent.com/firatkiral/javafxos/main/media/ensemble.gif)
 
-A `Raspberry Pi <http://www.raspberrypi.org/>`_ distribution to display JavaFX application in fullscreen. It includes JavaFX out of the box and the scripts necessary to load it at boot.
+A [`Raspberry Pi`](http://www.raspberrypi.org/) distribution to display JavaFX application in fullscreen. It includes JavaFX out of the box and the scripts necessary to load it at boot.
 
-This repository contains the source script to generate the distribution out of an existing `Raspbian <http://www.raspbian.org/>`_ distro image.
+This repository contains the source script to generate the distribution out of an existing [`Raspbian`](http://www.raspbian.org) distro image.
 
 
 Installation
 --------------
 
-#. Unzip the image and install it to an SD card `like any other Raspberry Pi image <https://www.raspberrypi.org/documentation/installation/installing-images/README.md>`
-#. It boots to a demo app if nothing is configured. You can replace the demo app with your own JavaFX app by following the steps below.
-#. Add your jfx application ``your-app.jar`` to ``javafxos`` folder in the first partition of the flashed card when using it like a flash drive. Configure ``launch.tx`` to point your javafx app, so it will be launched at boot.
-#. Configure your WiFi by editing ``javafxos-wpa-supplicant.txt`` if needed.
-#. Boot the Pi from the SD card
-#. Log into your Pi via SSH (it is located at ``javafxos.local`` `if your computer supports bonjour <https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview>`_ or the IP address assigned by your router), default username is "pi", default password is "12345" and change the password using the ``passwd`` command.
+- Unzip the image and install it to an SD card [`like any other Raspberry Pi image`](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
+- It boots to a demo app if nothing is configured. You can replace the demo app with your own JavaFX app by following the steps below.
+- Add your jfx application ``your-app.jar`` to ``javafxos`` folder in the first partition of the flashed card when using it like a flash drive. Configure ``launch.tx`` to point your javafx app, so it will be launched at boot.
+- Configure your WiFi by editing ``javafxos-wpa-supplicant.txt`` if needed.
+- Boot the Pi from the SD card
+- Log into your Pi via SSH (it is located at [``javafxos.local`` `if your computer supports bonjour`](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview) or the IP address assigned by your router), default username is "pi", default password is "12345" and change the password using the ``passwd`` command.
 
 Requirements
 ------------
